@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Web Devloper </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        * {
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            width: 80px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+
+        .leftsection {
+            font-size: 3rem;
+            margin: 30px 0;
+
+        }
+
+        .rightsection img {
+            width: 80%;
+            margin: 50px 0;
+            position: relative;
+
+
+
+        }
+
+        .home-sci {
+            position: absolute;
+            top: 50%;
+            right: 15%;
+            bottom: 40px;
+            width: 170px;
+            margin: 140px 0;
+            /* background: red;  */
+            display: flex;
+            justify-content: space-between;
+
+
+
+
+        }
+
+        .home-sci a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+
+        }
+
+        .home-sci a:hover {
+            color: #081b29;
+        }
+
+        .home-sci a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #00abf0;
+            z-index: -1;
+            transition: .5s;
+
+        }
+
+        .home-sci a:hover::before {
+            width: 100%;
+
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: rgb(152, 38, 180);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+
+
+        }
+
+        .firstsection p {
+            font-size: small;
+        }
+
+        .leftsection .btn-box {
+            display: flex;
+            justify-content: space-between;
+            width: 345px;
+            height: 50px;
+
+        }
+
+
+
+        .btn-box a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 55px;
+            background: transparent;
+            border: 2px solid#00abf0;
+            border-radius: 8px;
+            font-size: 19px;
+            color: #00abf0;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+
+        }
+
+        .btn-box a:hover {
+            color: #081b29;
+        }
+
+        .btn-box a:nth-child(2) {
+            background: transparent;
+            color: #116eb1;
+
+        }
+
+        .btn-box a:nth-child(2):hover {
+            /* background:#074470; */
+            background: transparent;
+        }
+
+        .btn-box a:nth-child(2)::before {
+            background: #00abf0;
+
+
+
+        }
+
+        .btn-box a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100px;
+            background: #00abf0;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .btn-box a:hover::before {
+            width: 100%;
+        }
+
+        /* .About {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+            padding-bottom: 6rem;
+        } */
+        .About {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 1.5rem;
+
+        }
+
+        .About-img img {
+            padding-bottom: 20px;
+            max-width: 630px;
+            height: auto;
+            width: 100%;
+            border-radius: 8px;
+
+
+        }
+
+        .About-text h2 {
+            font-size: 60px;
+
+        }
+
+        .About-text h2 span {
+            color: #00abf0;
+        }
+
+        .About-text p {
+            color: aliceblue;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 4rem;
+        }
+
+        #Services {
+            color: aliceblue;
+            font-size: 20px;
+            line-height: 1.4rem;
+            margin-bottom: 4rem;
+
+        }
+
+        .container {
+            padding: 90px;
+        }
+
+
+
+        .sub-title {
+            text-align: center;
+            font-size: 60px;
+            padding-bottom: 70px;
+
+        }
+
+        .sub-title span {
+            color: #0ef;
+
+        }
+
+        .Services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+
+        }
+
+        .Services-list div {
+            background-color: transparent;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 23px;
+            border-radius: 20px;
+            border-right: 10px;
+            transition: background 0.5s, transform 0.5s;
+            box-shadow: 1px 1px 20px #112290f7;
+
+        }
+
+        .Services-list div i {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        .Services-list div h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .main-text {
+            padding-top: 130px;
+            margin-top: 200px;
+
+        }
+
+        .main-text h2 {
+            font-size: 60px;
+            line-height: 1;
+            text-align: center;
+
+        }
+
+        .main-text h2 span {
+            color: #0ef;
+        }
+
+        .portfolio-contect {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(259px, auto));
+
+        }
+
+        .row {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .row img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            transition: transfere 0.5s;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), #0ef);
+            position: absolute;
+            border-radius: 8px;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 40px;
+            transition: height 0.5s;
+        }
+
+        .layer h5 {
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .layer p {
+            color: #000;
+            font-size: 1rem;
+            line-height: 1.8;
+
+
+        }
+
+        .layer i {
+            color: rgb(212, 12, 12);
+            margin-top: 20px;
+            font-size: 20px;
+            background: #fff;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+        }
+
+        .row:hover img {
+            transform: scale(1.1);
+        }
+
+        .row:hover .layer {
+            height: 100%;
+
+        }
+
+        /* .contact {
+            display: grid;
+            grid-template-columns: repeat (2, 1fr);
+            align-items: center;
+            gap: 3rem;
+            padding-left: 30px;
+            margin-top: 130px;
+        } */
+
+        .contact-text h2 {
+            font-size: 90px;
+            line-height: 1;
+            /* text-align: center; */
+        }
+
+        .contact-text h2 span {
+            color: #0ef;
+        }
+
+        .contact-text h4 {
+            margin: 15px 0;
+            color: rgb(228, 228, 228);
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .contact-text p {
+            color: rgb(177, 177, 177);
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .contact-list {
+            margin-bottom: 3rem;
+        }
+
+        .contact-list li {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .contact-list i {
+            display: inline-block;
+            color: #0ef;
+            font-size: 20px;
+            font-weight: 600;
+            transform: all .40s ease;
+        }
+
+        .contact-list li a:hover {
+            transform: scale(1.01) translateY(-5px);
+            color: #0ef;
+        }
+
+        .contact-icons a {
+            /* display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #0ef;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+            transition: .5s ease;
+            opacity: 0;
+            animation: slideLeft is ease forwards;
+            animation-delay: calc(.2s* var(--i)); */
+
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        /* .contact-icons i:hover{
+            background: #0ef;
+            color: #000;
+            box-shadow: 0 0 20px #0ef;
+        } */
+
+        .contact-icons a:hover {
+            color: #081b29;
+        }
+
+        .contact-icons a::before {
+
+            width: 0;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #00abf0;
+            z-index: -1;
+            transition: .5s;
+
+        }
+
+        .contact-icons a:hover::before {
+            width: 100%;
+        }
+
+        .contact-form form {
+            position: relative;
+        }
+
+        .contect-form form input,
+        form textarea {
+            border: none;
+            outline: none;
+            width: 90%;
+            padding: 18px;
+            background: #555557;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            border-radius: 0.5rem;
+
+        }
+
+        .contect-form textarea {
+            resize: none;
+            height: 220px;
+        }
+
+        .contact-form form .send {
+            /* display: inline-block;
+            padding: 14px 60px;
+            background: #0ef;
+            border-radius: 40px;
+            font-size: 18px;
+            color: #081b29;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+            opacity: 0;
+            animation: slidetop 1s ease forwards;
+            animation-delay: 2s;
+            box-shadow: 0 0 5px #0ef,
+            0 0 25px #0ef; */
+
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .contact-form form.send:hover {
+            box-shadow: 0 0 5px cyan,
+                0 0 25px cyan, 0 0 50px cyan,
+                0 0 100px cyan, 0 0 200px cyan;
+
+
+        }
+
+        .last-text p {
+            width: 100%;
+            text-align: center;
+            padding: 25px 0;
+            background: rgb(7, 85, 91);
+            font-weight: 300;
+            margin-top: 70px;
+
+        }
+
+        .top {
+            position: fixed;
+            bottom: 2.1rem;
+            right: 2.1rem;
+            top: 90%;
+            right: 0%;
+
+        }
+
+        .top i {
+            color: #000;
+            /* background: #0ef; */
+            font-size: 40px;
+            padding: 20px;
+            border-radius: 0.5rem;
+        }
+
+        #msg {
+            color: #00eeff;
+            margin-top: -10px;
+            display: block;
+        }
+
+
+        @media only screen and (max-with: 600px) {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"> Suraj Tomar</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#firstsection">Home</a></li>
+
+                    <li><a href="#About">About</a></li>
+
+                    <li><a href="#Services">Services</a></li>
+
+                    <li><a href="#portfolio">Projects</a></li>
+
+                    <li><a href="#contact">Contact Me</a></li>
+
+                    <i class='bx bx-chevrons-right'></i>
+                    <i class='bx bx-menu' style='color:#00aabf'></i>
+                </ul>
+                <i class='bx bx-menu' style='color:#00aabf'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                HEY, My Name Is <span class="purple">Suraj Tomar</span>
+                <div>And Im A </div>
+                <span id="element"></span>
+                <p class="text-gray">Unlocking Digital Potential with Creative Frontend Solutions. Transforming Ideas
+                    into Seamless User
+                    Experiences. Your Vision, My Code - Let's Build the Web Together."</p>
+
+                <div class="btn-box">
+                    <a href="#">Hire Me</a>
+                    <a href="#">Let'Talk</a>
+
+                </div>
+            </div>
+
+            <div class="rightsection">
+                <img src="/my pics/surj2.0.jpg" alt="">
+
+
+            </div>
+            <div class="home-sci">
+                <a href="https://instagram.com/kunwar_bhanupratap_singhtomar"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+
+            </div>
+
+
+        </section>
+        <hr>
+        <section class="About" id="About">
+            <div class="About-img">
+                <img src="/my pics/png.png" alt="">
+            </div>
+            <div class="About-text">
+                <h2>About <span>me</span></h2>
+                <p>Jack’s portfolio is exhaustive informative, letting his visitors know everything and anything that
+                    needs to be known, especially about his skills and how he infuses them into helping clients smash
+                    their goals. This web dev portfolio has a blog page containing tech articles</p>
+            </div>
+
+        </section>
+        <section>
+            <div class="Services" id="Services">
+                <div class="container">
+                    <h1 class="sub-title">My <span>Services</span></h1>
+                    <div class="Services-list">
+                        <div>
+                            <i class='bx bx-code' style='color:#00eeff'></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatibus
+                                necessitatibus facere dolore, nihil corrupti iusto ullam quisquam sequi saepe quod neque
+                                suscipit nulla facilis consequuntur officia, libero quibusdam at.</p>
+
+                        </div>
+                        <div>
+                            <i class='bx bx-crop' style='color:#00eeff'></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatibus
+                                necessitatibus facere dolore, nihil corrupti iusto ullam quisquam sequi saepe quod neque
+                                suscipit nulla facilis consequuntur officia, libero quibusdam at.</p>
+
+                        </div>
+                        <div>
+                            <i class='bx bxl-apple' style='color:#00eeff'></i>
+                            <h2>UI/UX Design</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, voluptatibus
+                                necessitatibus facere dolore, nihil corrupti iusto ullam quisquam sequi saepe quod neque
+                                suscipit nulla facilis consequuntur officia, libero quibusdam at.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div id="portfolio" id="Projects">
+                <div class="main-text" id="Projects">
+                    <h2>My <span>Projects</span></h2>
+
+                    <div class="portfolio-contect">
+                        <div class="row">
+                            <img src="/pic/hos.jpg" alt="">
+                            <div class="layer">
+                                <h5>UI/UX Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia at placeat possimus
+                                    necessitatibus voluptas ullam tenetur similique doloribus blanditiis. Delectus rerum
+                                    molestias corrupti magni perferendis praesentium magnam natus suscipit similique.
+                                </p>
+                                <a href="#"> <i class='bx bxl-external' style='color:#00eeff'></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <img src="/pic/hos.jpg" alt="">
+                            <div class="layer">
+                                <h5>UI/UX Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia at placeat possimus
+                                    necessitatibus voluptas ullam tenetur similique doloribus blanditiis. Delectus rerum
+                                    molestias corrupti magni perferendis praesentium magnam natus suscipit similique.
+                                </p>
+                                <a href="#"> <i class='bx bxl-external' style='color:#00eeff'></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <img src="/pic/hos.jpg" alt="">
+                            <div class="layer">
+                                <h5>UI/UX Design</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia at placeat possimus
+                                    necessitatibus voluptas ullam tenetur similique doloribus blanditiis. Delectus rerum
+                                    molestias corrupti magni perferendis praesentium magnam natus suscipit similique.
+                                </p>
+                                <a href="#"> <i class='bx bxl-external' style='color:#00eeff'></i></a>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-text">
+                <h2>Contact <span>Me</span></h2>
+                <h4>Let's Work Together</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil inventore eum nam dignissimos magnam
+                    saepe placeat consequuntur. Unde at deserunt alias enim illum voluptatibus aliquam blanditiis ut
+                    amet, ea eligendi.</p>
+                <div class="contact-list">
+                    <li><i class='bx bxs-send' style='color:#00eeff'></i>Contact@gmail.com</li>
+                    <li><i class='bx bx-phone'></i>1234567890</li>
+                </div>
+
+            </div>
+            <div class="contact-icons">
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <div class="contact-form">
+                <form action="">
+                    <input type="" placeholder="Enter Your Name" required>
+                    <input type="Email" placeholder="Enter Your Email" required>
+
+                    <input type="" placeholder="Enter Your Subject" required>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                    <input type="Submit" value="Submit" class="send">
+                </form>
+                <span id="msg">hello</span>
+            </div>
+        </section>
+
+        <div class="last-text">
+            <p>Developed with love by Suraj tomar 2023</p>
+        </div>
+        <a href="#" class="top"><i class='bx bx-arrow-to-top' style='color:#00eeff'></i></a>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        const msg = document.getElementById("msg")
+
+    </script>
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['WEB DEVELOPER', 'CYBER SECURITY', 'ETHICAL HACKING'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
